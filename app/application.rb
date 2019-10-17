@@ -5,13 +5,12 @@ class Application
      req = Rack::Request.new(env)
 
 
-     if req.path.match()
+     if req.path== "/items/<ITEM NAME>"
      else
        resp.write "Route not found"
-      resp.status = 404
+       resp.status = 404
+     end
 
-
-
-
-
+     resp.finish
    end
+ end
